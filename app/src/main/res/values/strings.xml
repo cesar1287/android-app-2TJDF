@@ -2,4 +2,8 @@
     <string name="app_name">App da turma 2TJDF</string>
     <string name="hello_world">Olá turma 2TJDF</string>
     <string name="tap_me">TAP ME</string>
+    <string name="hint_your_name">Digite seu nome</string>
+    <string name="hint_password">Digite sua senha</string>
+    <string name="hint_email">Digite seu e-mail</string>
+    <string name="button_continue">Continuar</string>
 </resources>
