@@ -6,4 +6,6 @@
     <string name="hint_password">Digite sua senha</string>
     <string name="hint_email">Digite seu e-mail</string>
     <string name="button_continue">Continuar</string>
+    <string name="already_have_an_account">Você já tem uma conta?</string>
+    <string name="login">Login</string>
 </resources>

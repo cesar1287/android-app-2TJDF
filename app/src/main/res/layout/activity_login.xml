@@ -1,101 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/ivLoginNetflixLog"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@drawable/netflix"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.2"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--        android:background="#E50914"-->
+        <ImageView
+            android:id="@+id/ivLoginNetflixLog"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/netflix"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLoginName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ivLoginNetflixLog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:hint="@string/hint_your_name">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLoginName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:hint="@string/hint_your_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLoginNetflixLog">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLoginEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tilLoginName"
-        app:layout_constraintStart_toStartOf="@id/tilLoginName"
-        app:layout_constraintEnd_toEndOf="@id/tilLoginName"
-        android:layout_marginTop="8dp"
-        android:hint="@string/hint_email">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLoginEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            />
+            android:layout_marginTop="8dp"
+            android:hint="@string/hint_email"
+            app:layout_constraintEnd_toEndOf="@id/tilLoginName"
+            app:layout_constraintStart_toStartOf="@id/tilLoginName"
+            app:layout_constraintTop_toBottomOf="@+id/tilLoginName">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilLoginPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tilLoginEmail"
-        app:layout_constraintStart_toStartOf="@id/tilLoginName"
-        app:layout_constraintEnd_toEndOf="@id/tilLoginName"
-        android:layout_marginTop="8dp"
-        android:hint="@string/hint_password">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilLoginPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            />
+            android:layout_marginTop="8dp"
+            android:hint="@string/hint_password"
+            app:layout_constraintEnd_toEndOf="@id/tilLoginName"
+            app:layout_constraintStart_toStartOf="@id/tilLoginName"
+            app:layout_constraintTop_toBottomOf="@+id/tilLoginEmail">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/btLoginContinue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tilLoginPassword"
-        app:layout_constraintStart_toStartOf="@id/tilLoginName"
-        app:layout_constraintEnd_toEndOf="@id/tilLoginName"
-        android:layout_marginTop="24dp"
-        android:text="@string/button_continue"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_facebook"/>
+        <Button
+            android:id="@+id/btLoginContinue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:text="@string/button_continue"
+            app:layout_constraintEnd_toEndOf="@id/tilLoginName"
+            app:layout_constraintStart_toStartOf="@id/tilLoginName"
+            app:layout_constraintTop_toBottomOf="@+id/tilLoginPassword" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_twitter"/>
+        <ImageView
+            android:id="@+id/ivLoginFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_facebook"
+            app:layout_constraintEnd_toStartOf="@+id/ivLoginTwitter"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btLoginContinue" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_google"/>
+        <ImageView
+            android:id="@+id/ivLoginTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_twitter"
+            app:layout_constraintEnd_toStartOf="@+id/ivLoginGoogle"
+            app:layout_constraintStart_toEndOf="@id/ivLoginFacebook"
+            app:layout_constraintTop_toTopOf="@+id/ivLoginFacebook" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/ivLoginGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_google"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivLoginTwitter"
+            app:layout_constraintTop_toTopOf="@id/ivLoginFacebook" />
+
+        <TextView
+            android:id="@+id/tvLoginAlreadyAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/already_have_an_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLoginFacebook" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_button_login"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoginAlreadyAccount"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
