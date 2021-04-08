@@ -36,6 +36,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ivLoginNetflixLog">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieLoginName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName" />
@@ -54,6 +55,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tilLoginName">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieLoginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
@@ -72,6 +74,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tilLoginEmail">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieLoginPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword" />
@@ -131,7 +134,7 @@
             app:layout_constraintTop_toBottomOf="@+id/ivLoginFacebook" />
 
         <Button
-            android:id="@+id/btLoginSave"
+            android:id="@+id/btLogin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_login"
