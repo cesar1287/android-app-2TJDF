@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_top_login">32dp</dimen>
+    <dimen name="size_netflix_logo_login_width">200dp</dimen>
+    <dimen name="size_netflix_logo_login_height">100dp</dimen>
+    <dimen name="margin_top_text_field">8dp</dimen>
+    <dimen name="padding_button_default">12dp</dimen>
+</resources>
