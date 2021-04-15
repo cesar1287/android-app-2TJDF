@@ -36,9 +36,32 @@ class LoginActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
 
-                startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                val user = User(
+                    number = 100.0,
+                    password = password,
+                    name = name,
+                    age = 26,
+                    email = email
+                )
+
+                //PARCELABLE
+                //SERIALIZABLE
+
+                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                intent.putExtra(KEY_INTENT_USER, user)
+
+                startActivity(intent)
             }
         }
+    }
+
+    companion object {
+        const val KEY_INTENT_NAME = "name"
+        const val KEY_INTENT_EMAIL = "email"
+        const val KEY_INTENT_PASSWORD = "password"
+        const val KEY_INTENT_AGE = "age"
+        const val KEY_INTENT_NUMBER = "number"
+        const val KEY_INTENT_USER = "user"
     }
 
     override fun onStart() {
