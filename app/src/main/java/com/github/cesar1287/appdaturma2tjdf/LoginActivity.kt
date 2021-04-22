@@ -25,14 +25,14 @@ class LoginActivity : AppCompatActivity() {
                 val password = tieLoginPassword.text.toString()
 
                 if (name.isBlank()) {
-                    tilLoginName.error = "Campo de nome vazio e/ou inválido"
+                    tilLoginName.error = getString(R.string.error_empty_invalid_field)
                 } else {
                     tilLoginName.isErrorEnabled = false
                 }
 
                 Toast.makeText(
                     this@LoginActivity,
-                    "Usuário salvo com sucesso",
+                    getString(R.string.user_saved_successfully),
                     Toast.LENGTH_SHORT
                 ).show()
 

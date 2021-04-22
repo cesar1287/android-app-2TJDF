@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">App da turma 2TJDF</string>
     <string name="hello_world">Olá turma 2TJDF</string>
-    <string name="tap_me">TAP ME</string>
+    <string name="tap_me">Clique aqui</string>
     <string name="hint_your_name">Digite seu nome</string>
     <string name="hint_password">Digite sua senha</string>
     <string name="hint_email">Digite seu e-mail</string>
     <string name="button_continue">Continuar</string>
     <string name="already_have_an_account">Você já tem uma conta?</string>
-    <string name="login">Login</string>
+    <string name="login">Entrar</string>
+    <string name="error_empty_invalid_field">Campo de nome vazio e/ou inválido</string>
+    <string name="user_saved_successfully">Usuário salvo com sucesso</string>
 </resources>

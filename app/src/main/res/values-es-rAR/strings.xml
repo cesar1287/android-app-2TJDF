@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicación de clase 2TJDF</string>
+    <string name="hello_world">Hola clase 2TJDF</string>
+    <string name="tap_me">Haga clic aquí</string>
+    <string name="hint_your_name">Su nombre</string>
+    <string name="hint_password">Tu contraseña</string>
+    <string name="hint_email">Su correo electrónico</string>
+    <string name="button_continue">Continuar</string>
+    <string name="already_have_an_account">¿Tienes una cuenta?</string>
+    <string name="login">Entrar</string>
+    <string name="error_empty_invalid_field">Campo de nombre vacío y / o inválido</string>
+    <string name="user_saved_successfully">Usuario guardado correctamente</string>
+</resources>
