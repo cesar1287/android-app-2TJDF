@@ -25,13 +25,13 @@ class MainActivity : AppCompatActivity() {
 //        val age = intent.getIntExtra(KEY_INTENT_AGE, 0)
 //        val number = intent.getDoubleExtra(KEY_INTENT_NUMBER, 0.0)
 
-        val user = intent.getSerializableExtra(KEY_INTENT_USER) as User
+        val user = intent.getParcelableExtra<User>(KEY_INTENT_USER)
 
         val helloWorld = findViewById<TextView>(R.id.tvMainHelloWorld)
-        helloWorld.text = "Meu nome é ${user.name}\n" +
-                "Meu email é ${user.email}\n" +
-                "Minha senha é ${user.password}\n" +
-                "Minha idade é ${user.age} - ${user.number}"
+        helloWorld.text = "Meu nome é ${user?.name}\n" +
+                "Meu email é ${user?.email}\n" +
+                "Minha senha é ${user?.password}\n" +
+                "Minha idade é ${user?.age} - ${user?.number}"
 
         findViewById<Button>(R.id.btMainTapMe).setOnClickListener {
             helloWorld.text = "O número sorteado é ${(Math.random()*100).toInt()}"
