@@ -32,7 +32,7 @@ class MainFragment : Fragment() {
 //        val age = intent.getIntExtra(KEY_INTENT_AGE, 0)
 //        val number = intent.getDoubleExtra(KEY_INTENT_NUMBER, 0.0)
 
-        val user = arguments?.getParcelable(KEY_INTENT_USER) as? User
+        val user = arguments?.getParcelable<User>(KEY_INTENT_USER)
 
         binding?.tvMainHelloWorld?.text = "Meu nome é ${user?.name}\n" +
                 "Meu email é ${user?.email}\n" +
