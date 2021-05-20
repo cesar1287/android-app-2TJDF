@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImcInputActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilImcInputHeight"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_top_login"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:hint="@string/hint_your_height"
+        app:counterEnabled="true"
+        app:counterMaxLength="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:suffixText="cm">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieImcInputHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilImcInputWeight"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_text_field"
+        android:hint="@string/hint_your_weight"
+        app:counterEnabled="true"
+        app:counterMaxLength="3"
+        app:layout_constraintEnd_toEndOf="@id/tilImcInputHeight"
+        app:layout_constraintStart_toStartOf="@id/tilImcInputHeight"
+        app:layout_constraintTop_toBottomOf="@+id/tilImcInputHeight"
+        app:suffixText="kg">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieImcInputWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btImcInputCalculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="@id/tilImcInputHeight"
+        app:layout_constraintStart_toStartOf="@id/tilImcInputHeight"
+        app:layout_constraintTop_toBottomOf="@+id/tilImcInputWeight" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
